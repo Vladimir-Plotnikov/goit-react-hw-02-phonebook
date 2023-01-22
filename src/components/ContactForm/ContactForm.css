@@ -27,3 +27,8 @@ button {
 .InputField {
     width: 200px;
 }
+
+.inputButton{
+display: flex;
+    flex-direction: column;
+}

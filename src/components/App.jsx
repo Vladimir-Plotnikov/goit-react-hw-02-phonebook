@@ -3,18 +3,26 @@ import './ContactForm/ContactForm.css';
 import { ContactForm } from './ContactForm/ContactForm';
 
 export class App extends Component{
-  state = {
-  contacts: [],
-  name: ''
-  }
+
+  formSubmitHandler = data => {
+    return (data)
+}
+  // state = {
+  // contacts: [],
+  // name: ''
+  // }
 
 
   render() {
     return (
       <div className='GlobalClass'>
-        <div className='PhoneBookBox'>
+        <div className='PhoneBookBox' >
           <h1>Phonebook</h1>
-          <ContactForm/>
+          <ContactForm onSubmit={this.formSubmitHandler} />
+          <h1>Contacts</h1>
+                <ul>
+                    <li>{this.formSubmitHandler()}</li>
+                </ul>
         </div>
       </div>
   )
