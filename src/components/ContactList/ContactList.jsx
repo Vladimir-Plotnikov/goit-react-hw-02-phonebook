@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import ContactItem from 'components/ContactItem/ContactItem';
 
-
 function ContactList({ contacts, deleteContact }) {
     return (
         <ul>
@@ -15,7 +14,7 @@ function ContactList({ contacts, deleteContact }) {
      ))}</ul>
     
     )
-}
+};
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
@@ -26,4 +25,4 @@ ContactList.propTypes = {
   deleteContact: PropTypes.func.isRequired,
 };
 
-export default ContactList
+export default ContactList;

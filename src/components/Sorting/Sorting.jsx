@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 function Sorting({ value, onChange }) {
@@ -20,4 +19,4 @@ Sorting.propTypes = {
     onChange: PropTypes.func.isRequired,
 }
 
-export default Sorting
+export default Sorting;

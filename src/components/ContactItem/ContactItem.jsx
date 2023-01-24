@@ -8,14 +8,14 @@ function ContactItem({ contact: { name, number }, deleteContact }) {
             <button type='button' onClick={deleteContact}>Delete</button>
         </li>
     )
-}
+};
 
 ContactItem.propTypes = {
     contact: PropTypes.shape({
         name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired  
+        number: PropTypes.string.isRequired
     }).isRequired,
     deleteContact: PropTypes.func.isRequired,
-}
+};
 
 export default ContactItem

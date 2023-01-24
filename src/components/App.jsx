@@ -6,6 +6,7 @@ import Sorting from './Sorting/Sorting';
 import './ContactForm/ContactForm.css';
 import './Sorting/Sorting.css'
 import './ContactItem/ContactItem.css'
+
 export class App extends Component{
 
   state = {
@@ -33,8 +34,7 @@ addContact = contact => {
       alert(`${contact.name} is already in contacts.`);
     }
   };
-  // addContact
-  /// this.state.contact.find(contact=>contact.name.toLowerCase()!=newContact.name.toLowerCase())
+
 filterContacts = () => {
     return this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
@@ -50,12 +50,6 @@ findContact = ({ currentTarget: { value } }) => {
       contacts: contacts.filter(({ id }) => id !== contactId),
     }));
   };
-
-
-//   formSubmitHandler =
-//     ({ name, number }) => {
-//       this.setState({name, number})
-// }
 
   render() {
     return (
@@ -75,8 +69,6 @@ findContact = ({ currentTarget: { value } }) => {
       </div>
   )
 }
-
-
-}
+};
 
 

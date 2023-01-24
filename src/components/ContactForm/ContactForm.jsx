@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { nanoid } from 'nanoid'
-// import './ContactForm/ContactForm.css';
 
 export class ContactForm extends Component{
      state = {
@@ -11,30 +10,28 @@ export class ContactForm extends Component{
      }
       
     handleNameChange = ({ currentTarget: { name, value } }) => {
-        this.setState({[name]:value})
-    }
+        this.setState({ [name]: value })
+    };
     
-    
-
 
     handleSubmit = e => {
         e.preventDefault()
         
-   const newContact = {
-        id: nanoid(),
-        name: this.state.name,
-        number: this.state.number
-}
+        const newContact = {
+            id: nanoid(),
+            name: this.state.name,
+            number: this.state.number
+        }
 
         this.props.onSubmit(newContact);
-        this.setState({name:'', number:''})
+        this.setState({ name: '', number: '' })
         this.reset();
-    }
+    };
     
     
     reset = () => {
-        this.setState({contacts: [], name: '',number: ''})
-    }
+        this.setState({ contacts: [], name: '', number: '' })
+    };
 
     nameIdGenerate = nanoid();
 
@@ -78,8 +75,8 @@ export class ContactForm extends Component{
             </div>
     )
 }
-}
+};
 
 ContactForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
-}
+};
