@@ -17,8 +17,6 @@ export class App extends Component{
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ],
   filter: '',
-  name: '',
-  number: ''
   }
 
 addContact = contact => {
@@ -45,28 +43,30 @@ findContact = ({ currentTarget: { value } }) => {
     this.setState({ filter: value });
 };
   
- deleteContact = contactId => {
+deleteContact = contactId => {
     this.setState(({ contacts }) => ({
       contacts: contacts.filter(({ id }) => id !== contactId),
     }));
   };
 
-  render() {
-    return (
-      <div className='GlobalClass'>
-        <div className='PhoneBookBox' >
-          <h1>Phonebook</h1>
-          <ContactForm onSubmit={this.addContact} />
-          <Sorting
-            value={this.state.filter}
-            onChange={this.findContact}
-          />
-          <ContactList
-            contacts={this.filterContacts()}
-            deleteContact={this.deleteContact}
-             />
-        </div>
+render() {
+  return (
+    <div className='GlobalClass'>
+      <div>
+        <h1 className='PhoneBook'>Phonebook</h1>
+        <ContactForm onSubmit={this.addContact} />
+        
+        <Sorting
+          value={this.state.filter}
+          onChange={this.findContact}
+        />
+        
+        <ContactList
+          contacts={this.filterContacts()}
+          deleteContact={this.deleteContact}
+        />
       </div>
+    </div>
   )
 }
 };

@@ -2,7 +2,8 @@ import PropTypes from 'prop-types'
 
 function Sorting({ value, onChange }) {
     return (
-        <div>
+        <div className='FindContact'>
+        <h3>Find contact by name</h3>
             <input 
                 className='SortInput'
                 type="text"

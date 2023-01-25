@@ -7,6 +7,12 @@
     border: 1px solid black;
 }
 
+.FindContact {
+    width: 400px;
+    padding: 20px;
+    font-style: italic;
+}
+
 .Button {
     width: 100px;
     margin-top: 10px;
@@ -32,4 +38,8 @@ button {
 .inputButton{
 display: flex;
     flex-direction: column;
+}
+
+.PhoneBook{
+    margin: 20px;
 }
